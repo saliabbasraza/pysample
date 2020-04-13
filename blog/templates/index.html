@@ -1,0 +1,21 @@
+{% extends "head.html" %}
+
+{% block title %} - Blogs{% endblock %}
+
+{% block content %}
+    <h1>Products</h1>
+    <div class="row">
+        {% for blog in blogs %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ blog.image_url }}" class="card-img-top" alt="{{ blog.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ blog.name }}</h5>
+                        <p class="card-text">{{ blog.content }}</p>
+                        <a href="#" class="btn btn-primary">Read</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}
